@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  min-width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  background-color: #140623;
+}

@@ -1,0 +1,61 @@
+.movie-box {
+  text-align: center;
+  margin: 15px 15px 35px 70px;
+  position: relative;
+  float: left;
+  width: 200px;
+  height: 350px;
+}
+
+.movie-box > image {
+  position: absolute;
+  width: 200px;
+}
+
+.movie-box > h2 {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+}
+
+.movie-box > h2 span {
+  color: white;
+  font: bold 24px/45px Helvetica, Sans-Serif;
+  letter-spacing: -1px;
+  background: rgb(0, 0, 0); /* fallback color */
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+}
+
+.movie-box > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.hover-box {
+  position: absolute;
+  z-index: 10;
+  width: 200px;
+  height: 350px;
+  top: 0;
+  background-color: #0a0a0a;
+}
+
+.hover-box > figure > img {
+  object-fit: cover;
+}
+
+.hover-box > .image {
+  height: 100%;
+  width: 100%;
+}
+
+.hover-box > figure > p{
+  color: #ffffff;
+  font-size: 20px;
+  word-wrap: break-word;
+  font-family: Impact;
+}
+
+

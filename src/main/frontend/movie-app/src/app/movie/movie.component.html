@@ -1,0 +1,6 @@
+<div class="container is-fluid">
+  <div class="movie-box" *ngFor="let movie of movies" [routerLink]="['/movie-player', movie.movie_id]">
+    <img src="{{movie.image}}">
+    <h2><span>{{movie.title}}</span></h2>
+  </div>
+</div>

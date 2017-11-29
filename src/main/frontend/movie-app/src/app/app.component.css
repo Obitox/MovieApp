@@ -1,0 +1,85 @@
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color: #ffffff;
+  font-family: Impact;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color:    #ffffff;
+  opacity:  1;
+  font-family: Impact;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:    #ffffff;
+  opacity:  1;
+  font-family: Impact;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color:    #ffffff;
+  font-family: Impact;
+}
+:-ms-input-placeholder { /* Microsoft Edge */
+  color:    #ffffff;
+  font-family: Impact;
+}
+
+.login {
+  padding-right: 50px;
+}
+
+.level {
+  background-color: #131838;
+}
+
+.logo {
+  background-color: #00edae;
+  padding: 15px;
+}
+
+.search {
+  background-color: #00edae;
+}
+
+.search-btn {
+  background-color: #00edae;
+  color: #ffffff;
+  font-family: Impact;
+}
+
+.search-input {
+  background-color: #00edae;
+}
+
+.a-movie-app {
+  color: #ffffff;
+  font-family: Impact;
+  font-size: 35px;
+  outline: 0;
+}
+
+.a-movies {
+  color: #ffffff;
+  font-family: Impact;
+  font-size: 20px;
+  outline: 0;
+}
+
+.p-genres {
+  color: #ffffff;
+  font-family: Impact;
+  font-size: 20px;
+}
+
+.p-login {
+  color: #00edae;
+  font-family: Impact;
+  font-size: 20px;
+}
+
+.img-login {
+  margin-right: 5px;
+}
+
+
+.login a {
+  outline: 0;
+}
+
