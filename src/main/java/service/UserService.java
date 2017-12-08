@@ -2,6 +2,9 @@ package service;
 
 import database.ConnectionManager;
 import model.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -17,14 +20,19 @@ public class UserService {
 
     private ArrayList<User> listOfAllUsers;
 
-    public UserService() {
+    private final
+    PasswordEncoder passwordEncoder;
+
+    @Autowired
+    public UserService(@Qualifier("passwordEncoder") PasswordEncoder passwordEncoder) {
         listOfAllUsers = new ArrayList<>();
+        this.passwordEncoder = passwordEncoder;
     }
 
-    public void createAUser(User user){
+    public User createAUser(User user){
         if(findUserByUserName(user.getUsername())) {
             sql = "INSERT INTO user(username, password, email, name)" +
-                    "VALUES('"+user.getUsername()+"','"+user.getPassword()+"','"+user.getEmail()+"','"+user.getName()+"')";
+                    "VALUES('"+user.getUsername()+"','"+passwordEncoder.encode(user.getPassword())+"','"+user.getEmail()+"','"+user.getName()+"')";
             con = ConnectionManager.getConnection();
             try {
                 stmt = con.prepareStatement(sql);
@@ -33,6 +41,7 @@ public class UserService {
                 e.printStackTrace();
             }
         }
+        return user;
     }
 
     private boolean findUserByUserName(String username){

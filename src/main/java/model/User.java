@@ -17,4 +17,8 @@ public class User {
         this.email = email;
         this.name = name;
     }
+
+    public User(){
+
+    }
 }

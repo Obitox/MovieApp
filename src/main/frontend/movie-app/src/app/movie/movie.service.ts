@@ -1,16 +1,18 @@
-import {Injectable, OnDestroy} from '@angular/core';
-import {Http} from '@angular/http';
+import {Injectable} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
 import 'rxjs/add/operator/map'
-import {Observable} from "rxjs/Observable";
 import {Movie} from "./Movie";
+import * as _ from 'lodash';
 
 @Injectable()
 export class MovieService {
 
-  constructor(private http: Http) {}
+  constructor(private http: HttpClient) {}
 
   acquireMovies() : any {
-    return this.http.get("/movies/getAllMovies").map(res => res.json());
+    return this.http
+      .get<Movie[]>("/movies/getAllMovies")
+      .map(data => _.values(data))
   }
 
 }

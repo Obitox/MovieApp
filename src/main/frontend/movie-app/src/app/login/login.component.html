@@ -5,7 +5,7 @@
   </ul>
 </div>
 <div class="container-login" *ngIf="login">
-  <form #loginForm="ngForm" (ngSubmit)="check(loginForm.value)">
+  <form #loginForm="ngForm" (ngSubmit)="signUp(loginForm.value)">
     <div class="field login-user">
       <p class="control has-icons-left has-icons-right">
         <input class="input" type="email" placeholder="User" name="email" ngModel>
@@ -34,7 +34,7 @@
     </div>
   </form>
 </div>
-<form *ngIf="!login" #signUPForm="ngForm" (ngSubmit)="check(signUPForm.value)" >
+<form *ngIf="!login" #signUPForm="ngForm" (ngSubmit)="signUp(signUPForm.value)" >
   <div class="field">
     <label class="label">Name</label>
     <div class="control">
